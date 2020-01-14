@@ -1,1 +1,1 @@
-web: gunicorn xpence_project.wsgi:application
+web: gunicorn django_movies.wsgi:application
