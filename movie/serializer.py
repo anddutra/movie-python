@@ -7,9 +7,12 @@ class ActorSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ActorMovieSerializer(serializers.ModelSerializer):
+    getActorName = serializers.CharField(read_only=True) #read_only para não dar problema em post e put
+    #getMovieTitle = serializers.CharField(read_only=True)
+
     class Meta:
         model = ActorMovie
-        fields = ('id', 'actor')
+        fields = ['getActorName']
 
 class MovieSerializer(serializers.ModelSerializer):
     actorsmovie = ActorMovieSerializer(many=True)

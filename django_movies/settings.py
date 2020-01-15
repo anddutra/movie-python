@@ -25,7 +25,7 @@ SECRET_KEY = 'x+*99f_a$rm$i&_sm&5*ei+^hy9bq_7^y(z66@3s^rcet9ulru'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'anddutra-movie-python.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'anddutra-movie-python.herokuapp.com']
 
 
 # Application definition

@@ -10,3 +10,11 @@ class Movie(models.Model):
 class ActorMovie(models.Model):
     actor = models.ForeignKey(Actor, on_delete=models.PROTECT, related_name='actor_fk', null=True)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='actorsmovie')
+
+    @property
+    def getActorName(self):
+        return self.actor.name
+
+    @property
+    def getMovieTitle(self):
+        return self.movie.title
